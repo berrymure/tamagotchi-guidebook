@@ -1828,4 +1828,16 @@ button {
     transform: scale(1.08, 1.03) !important;
     transform-origin: left bottom;
   }
+
+  /* 목차가 들어있는 사이드바 박스 전체의 폰트를 강제 고정 */
+  aside,
+  .manual-sidebar,
+  .toc-container,
+  .toc-btn,
+  .toc-submenu,
+  .toc-submenu * {
+    font-family: "PixelFont", sans-serif !important;
+    transform: scale(1.08, 1.03) !important;
+    transform-origin: left bottom;
+  }
 }
