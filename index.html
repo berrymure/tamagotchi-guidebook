@@ -24,21 +24,14 @@
         .manual-container {
           grid-template-columns: 1fr;
         }
-      }
-
-      /* 플로팅 목차 박스 */
-      .manual-toc {
-        position: sticky;
-        top: 20px;
-        max-height: 90vh;
-        overflow-y: auto;
-        width: 280px;
-        flex-shrink: 0;
-        background: #fff;
-        border: 2px solid #ffc0cb;
-        border-radius: 10px;
-        padding: 12px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+        /* 모바일에서는 목차가 화면을 따라다니지 않도록 수정 */
+        .manual-toc {
+          position: relative;
+          top: 0;
+          width: 100%; /* 가로 크기를 모바일에 맞게 꽉 채움 */
+          max-height: none; /* 높이 제한 해제 */
+          margin-bottom: 20px;
+        }
       }
       .manual-toc::-webkit-scrollbar {
         width: 5px;
@@ -6118,7 +6111,7 @@
     }
   }
 
-  // 2. 우측 화면의 내용을 탭처럼 싹 바꿔주는 함수 (이게 빠져있어서 안 움직였습니다!)
+  // 2. 우측 화면의 내용을 탭처럼 싹 바꿔주는 함수
   function showSection(event, sectionId) {
     // 모든 우측 본문 숨기기
     const sections = document.querySelectorAll(".manual-section");
@@ -6141,7 +6134,20 @@
       event.currentTarget.classList.add("active");
     }
 
-    // 화면을 맨 위로 부드럽게 끌어올리기
-    window.scrollTo(0, 0);
+    // 💡 모바일 화면(너비 768px 이하)일 때의 스마트 동작 추가
+    if (window.innerWidth <= 768) {
+      // 1. 열려있던 아코디언 메뉴들을 전부 깔끔하게 닫기
+      const allSubmenus = document.querySelectorAll(".toc-submenu");
+      allSubmenus.forEach((submenu) => submenu.classList.remove("open"));
+
+      // 2. 내용이 시작되는 본문 위치로 화면을 부드럽게 스크롤하기
+      const contentArea = document.querySelector(".manual-content-area");
+      if (contentArea) {
+        contentArea.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // PC 화면일 때는 기존처럼 맨 위로 스크롤
+      window.scrollTo(0, 0);
+    }
   }
 </script>
