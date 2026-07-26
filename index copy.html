@@ -16,6 +16,23 @@
     <script defer src="assets/js/data.js"></script>
     <script defer src="assets/js/common.js"></script>
     <style>
+      /* 1. 폰트 등록 */
+      @font-face {
+        font-family: "NeoDunggeunmoPro";
+        src: url("NeoDunggeunmoPro-Regular.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* 2. 웹사이트 전체에 폰트 적용 */
+      body {
+        font-family: "NeoDunggeunmoPro", sans-serif;
+        /* 기존 스타일 유지 */
+        background-color: #fce4ec;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
       /* 전체 레이아웃 2단 분할 */
       .manual-container {
         display: grid;
