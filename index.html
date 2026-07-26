@@ -13,6 +13,18 @@
     <script defer src="assets/js/data.js"></script>
     <script defer src="assets/js/common.js"></script>
     <style>
+      /* 1. 눈누 폰트 100% 확실하게 불러오기 (여기가 빠져있었습니다!) */
+      @font-face {
+        font-family: 'NeoDunggeunmoPro';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* 2. 프리텐다드 폰트를 무시하고 무조건 둥근모 폰트로 강제 고정!! */
+      *, button, input, div, span, table, th, td, a {
+        font-family: 'NeoDunggeunmoPro', sans-serif !important;
+      }
       /* 전체 레이아웃 2단 분할 */
       .manual-container {
         display: grid;
