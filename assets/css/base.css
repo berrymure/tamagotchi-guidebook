@@ -1,14 +1,14 @@
 /* 1. 프로젝트에 넣어둔 갈무리 11 픽셀 폰트 등록 */
 @font-face {
-  font-family: 'Galmuri11';
-  src: url('../font/Galmuri11.woff2') format('woff2');
+  font-family: "Galmuri11";
+  src: url("../font/Galmuri11.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 /* 2. 전체 웹사이트에 픽셀 폰트 적용 */
 body {
-  font-family: 'Galmuri11', sans-serif !important;
+  font-family: "Galmuri11", sans-serif !important;
 }
 
 :root {
@@ -1815,5 +1815,17 @@ button {
   .taskbar__clock {
     padding-inline: 8px;
     font-size: 9px;
+  }
+
+  /* 목차 메뉴와 아코디언 타이틀 영역 폰트 강제 적용 */
+  .toc-btn,
+  .toc-submenu li,
+  .toc-submenu a,
+  .menu-title,
+  .sidebar-menu,
+  [class*="toc"] {
+    font-family: "PixelFont", sans-serif !important;
+    transform: scale(1.08, 1.03) !important;
+    transform-origin: left bottom;
   }
 }
