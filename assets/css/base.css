@@ -1,3 +1,17 @@
+/* 모든 요소의 테두리와 안쪽 여백을 너비에 포함시킵니다 (레이아웃 틀어짐 방지) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 이미지나 비디오가 화면 밖으로 삐져나가지 않게 최대 너비를 100%로 제한합니다 */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 /* 1. 프로젝트에 넣어둔 갈무리 11 픽셀 폰트 등록 */
 @font-face {
   font-family: "Galmuri11";
@@ -1839,5 +1853,31 @@ button {
     font-family: "PixelFont", sans-serif !important;
     transform: scale(1.08, 1.03) !important;
     transform-origin: left bottom;
+  }
+
+  /* 화면 너비가 768px 이하(모바일)일 때 적용되는 CSS */
+  @media screen and (max-width: 768px) {
+    /* 예시: 전체 내용을 감싸는 박스가 있다면 너비를 100%로 꽉 채우기 */
+    body,
+    .container,
+    .main-wrap {
+      width: 100%;
+      min-width: 100%;
+      padding: 10px; /* 양옆에 살짝 여백 주기 */
+    }
+
+    /* 예시: 대화창이나 박스가 고정 너비(예: 800px)로 되어 있다면 풀어주기 */
+    .speech-bubble,
+    .content-box {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* 폰트 크기가 모바일에서 너무 크거나 작다면 조정 */
+    .jp-read,
+    .kr-text {
+      font-size: 14px;
+    }
   }
 }
