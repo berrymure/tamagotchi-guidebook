@@ -20,9 +20,9 @@ video {
   font-style: normal;
 }
 
-/* 2. 전체 웹사이트에 픽셀 폰트 적용 */
-body {
-  font-family: "Galmuri11", sans-serif !important;
+/* 모든 주요 요소에 동일한 폰트 적용 (폰트명은 실제 사용 중인 폰트 이름으로 변경하세요) */
+body, h1, h2, h3, h4, p, a, button, input, div, span, li {
+  font-family: 'Galmuri11', sans-serif !important;
 }
 
 :root {
@@ -1855,16 +1855,23 @@ button {
     transform-origin: left bottom;
   }
 
-  /* 화면 너비가 768px 이하(모바일)일 때 적용되는 CSS */
   @media screen and (max-width: 768px) {
-    /* 예시: 전체 내용을 감싸는 박스가 있다면 너비를 100%로 꽉 채우기 */
-    body,
-    .container,
-    .main-wrap {
-      width: 100%;
-      min-width: 100%;
-      padding: 10px; /* 양옆에 살짝 여백 주기 */
-    }
+  /* 1. 전체 화면 좌우 여백 다이어트 */
+  body, .main-container { /* .main-container는 전체를 감싸는 클래스명으로 바꿔주세요 */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin: 0 auto;
+  }
+
+  /* 2. 목차 박스 가로길이 100%로 꽉 채우기 */
+  .toc, .index-box { /* 목차에 해당하는 실제 클래스명으로 바꿔주세요 */
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+}
 
     /* 예시: 대화창이나 박스가 고정 너비(예: 800px)로 되어 있다면 풀어주기 */
     .speech-bubble,
@@ -1877,7 +1884,7 @@ button {
     /* 폰트 크기가 모바일에서 너무 크거나 작다면 조정 */
     .jp-read,
     .kr-text {
-      font-size: 14px;
+      font-size: 11px;
     }
   }
 }
