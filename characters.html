@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>캐릭터 도감 — Tamagotchi Meets 한국어 가이드</title>
+  <meta name="theme-color" content="#f6bfd8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/guide.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <script defer src="assets/js/characters.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#charaGrid">캐릭터 목록으로 바로가기</a>
+  <nav class="gnav" id="gnav" aria-label="주요 메뉴"></nav>
+
+  <div class="page-hero">
+    <div class="window">
+      <div class="titlebar titlebar--pink">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">CHARACTERS.HTML</span>
+      </div>
+      <div style="padding:18px 20px;">
+        <h1>🐣 캐릭터 도감</h1>
+        <p>이름(한국어·일본어·영문), 세대, 성장조건, 좋아하는 음식·장난감을 한 번에 확인하세요.</p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toolbar" aria-label="캐릭터 분류, 검색 및 정렬">
+    <div class="toolbar__inner">
+      <div class="tabs" id="genTabs" role="group" aria-label="세대 분류"></div>
+      <div class="toolbar__tools">
+        <label class="selectbox" for="sortSelect">
+          <span class="sr-only">정렬 방식</span>
+          <select id="sortSelect">
+            <option value="default">기본순</option>
+            <option value="name">이름순(가나다)</option>
+            <option value="closeness">친밀도 필요치순</option>
+          </select>
+        </label>
+        <div class="searchbox">
+          <label class="sr-only" for="searchInput">캐릭터 검색</label>
+          <span class="searchbox__icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="한글/일본어/영문 이름 검색...">
+          <button class="searchbox__clear" id="clearSearch" type="button" aria-label="검색어 지우기" hidden>×</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content" id="charaSection">
+    <div class="section-label">
+      <div>
+        <span class="section-label__eyebrow">CHARACTER DEX</span>
+        <strong id="resultLabel" aria-live="polite">전체 캐릭터 · 0</strong>
+      </div>
+      <span class="section-label__line" aria-hidden="true"></span>
+    </div>
+    <div class="chara-grid" id="charaGrid"></div>
+  </main>
+
+  <div class="checker" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong>Tamagotchi Meets 한국어 가이드</strong><p>캐릭터 데이터는 예시이며 계속 보완됩니다.</p></div>
+      <small>© 비공식 팬 사이트</small>
+    </div>
+  </footer>
+  <footer class="taskbar">
+    <button class="taskbar__start" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">✿ START</button>
+    <span class="taskbar__info">CHARACTERS.HTML</span>
+    <a class="taskbar__store" href="growth.html">🌱 진화 가이드</a>
+    <time class="taskbar__clock" id="clock">00:00</time>
+  </footer>
+
+  <!-- 캐릭터 상세 모달 -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <section class="window product-modal info-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="titlebar titlebar--pink">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name" id="modalTab">CHARACTER_DETAIL.HTML</span>
+        <span class="window-controls"><button class="modal-close" id="modalClose" type="button" aria-label="닫기">×</button></span>
+      </div>
+      <div class="product-modal__body">
+        <div class="product-modal__gallery">
+          <div class="product-modal__image-wrap" style="display:flex;align-items:center;justify-content:center;font-size:80px;" id="modalImage"></div>
+        </div>
+        <div class="product-modal__info">
+          <div class="product-modal__topline">
+            <span class="product-modal__category" id="modalGen"></span>
+            <span class="product-modal__status" id="modalBadge"></span>
+          </div>
+          <h2 id="modalTitle"></h2>
+          <p class="product-modal__summary" id="modalNames"></p>
+          <table class="spec-table" id="modalSpecs"></table>
+          <div class="checklist-row">
+            <label><input type="checkbox" id="modalChecklist"> 이 캐릭터 얻기 체크리스트에 추가</label>
+          </div>
+          <div class="product-modal__actions">
+            <button class="share-button" id="modalFavBtn" type="button">★ 즐겨찾기에 추가</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아이템 DB — Tamagotchi Meets 한국어 가이드</title>
+  <meta name="theme-color" content="#f6bfd8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/guide.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <script defer src="assets/js/items.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#itemGrid">아이템 목록으로 바로가기</a>
+  <nav class="gnav" id="gnav" aria-label="주요 메뉴"></nav>
+
+  <div class="page-hero">
+    <div class="window">
+      <div class="titlebar titlebar--butter">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">ITEMS_DB.HTML</span>
+      </div>
+      <div style="padding:18px 20px;">
+        <h1>🎁 아이템 DB</h1>
+        <p>음식·장난감·액세서리·배경 아이템의 가격, 구매처, 효과, 좋아하는 캐릭터를 검색해보세요.</p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toolbar" aria-label="아이템 분류 및 검색">
+    <div class="toolbar__inner">
+      <div class="tabs" id="itemTabs" role="group" aria-label="아이템 카테고리"></div>
+      <div class="toolbar__tools">
+        <div class="searchbox">
+          <label class="sr-only" for="searchInput">아이템 검색</label>
+          <span class="searchbox__icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="아이템명(한글/일본어) 검색...">
+          <button class="searchbox__clear" id="clearSearch" type="button" aria-label="검색어 지우기" hidden>×</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content" id="itemSection">
+    <div class="section-label">
+      <div>
+        <span class="section-label__eyebrow">ITEM DB</span>
+        <strong id="resultLabel" aria-live="polite">전체 아이템 · 0</strong>
+      </div>
+      <span class="section-label__line" aria-hidden="true"></span>
+    </div>
+    <div class="db-grid" id="itemGrid"></div>
+  </main>
+
+  <div class="checker" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong>Tamagotchi Meets 한국어 가이드</strong><p>아이템 가격/효과는 예시 데이터입니다.</p></div>
+      <small>© 비공식 팬 사이트</small>
+    </div>
+  </footer>
+  <footer class="taskbar">
+    <button class="taskbar__start" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">✿ START</button>
+    <span class="taskbar__info">ITEMS_DB.HTML</span>
+    <a class="taskbar__store" href="towns.html">🏘️ 마을 가이드</a>
+    <time class="taskbar__clock" id="clock">00:00</time>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <section class="window product-modal info-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="titlebar titlebar--butter">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">ITEM_DETAIL.HTML</span>
+        <span class="window-controls"><button class="modal-close" id="modalClose" type="button" aria-label="닫기">×</button></span>
+      </div>
+      <div class="product-modal__body">
+        <div class="product-modal__gallery">
+          <div class="product-modal__image-wrap" style="display:flex;align-items:center;justify-content:center;font-size:80px;" id="modalImage"></div>
+        </div>
+        <div class="product-modal__info">
+          <span class="product-modal__category" id="modalCategory"></span>
+          <h2 id="modalTitle"></h2>
+          <p class="product-modal__summary" id="modalNames"></p>
+          <table class="spec-table" id="modalSpecs"></table>
+          <div class="product-modal__actions">
+            <button class="share-button" id="modalFavBtn" type="button">★ 즐겨찾기에 추가</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

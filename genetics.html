@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>유전자 조합 계산기 — Tamagotchi Meets 한국어 가이드</title>
+  <meta name="theme-color" content="#f6bfd8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/guide.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <script defer src="assets/js/genetics.js"></script>
+</head>
+<body>
+  <nav class="gnav" id="gnav" aria-label="주요 메뉴"></nav>
+
+  <div class="page-hero">
+    <div class="window">
+      <div class="titlebar titlebar--lavender">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">GENETICS_CALCULATOR.HTML</span>
+      </div>
+      <div style="padding:18px 20px;">
+        <h1>🧬 유전자 조합 계산기</h1>
+        <p>두 캐릭터를 선택하면 다음 세대로 태어날 수 있는 자녀 캐릭터 후보를 예측해드려요.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-section">
+    <div class="gene-calc">
+      <div class="gene-calc__pickers">
+        <label>
+          <span class="sr-only">캐릭터 A</span>
+          <select id="parentA"></select>
+        </label>
+        <span class="gene-calc__plus">+</span>
+        <label>
+          <span class="sr-only">캐릭터 B</span>
+          <select id="parentB"></select>
+        </label>
+      </div>
+      <button class="primary-button" id="calcBtn" type="button" style="width:100%;">🧬 자녀 캐릭터 예측하기</button>
+
+      <div class="gene-result" id="geneResult" hidden>
+        <strong>예상 자녀 캐릭터</strong>
+        <div class="gene-result__list" id="geneResultList"></div>
+      </div>
+      <p class="gene-disclaimer">
+        ⚠️ 이 계산 결과는 캐릭터 계열(성격 타입) 기반의 <strong>간단한 예시 시뮬레이션</strong>이며, 실제 게임 내 확률과 다를 수 있어요.
+        정확한 확률은 최신 공략 자료를 참고해 관리자 페이지에서 데이터를 보완해주세요.
+      </p>
+    </div>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong>Tamagotchi Meets 한국어 가이드</strong><p>유전자 계산 로직은 예시입니다.</p></div>
+      <small>© 비공식 팬 사이트</small>
+    </div>
+  </footer>
+  <footer class="taskbar">
+    <button class="taskbar__start" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">✿ START</button>
+    <span class="taskbar__info">GENETICS_CALCULATOR.HTML</span>
+    <a class="taskbar__store" href="characters.html">🐣 캐릭터 도감</a>
+    <time class="taskbar__clock" id="clock">00:00</time>
+  </footer>
+</body>
+</html>

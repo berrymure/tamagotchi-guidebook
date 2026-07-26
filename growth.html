@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>성장조건 · 진화 — Tamagotchi Meets 한국어 가이드</title>
+  <meta name="theme-color" content="#f6bfd8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/guide.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <script defer src="assets/js/growth.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#evoTree">진화 트리로 바로가기</a>
+  <nav class="gnav" id="gnav" aria-label="주요 메뉴"></nav>
+
+  <div class="page-hero">
+    <div class="window">
+      <div class="titlebar titlebar--lavender">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">GROWTH_TREE.HTML</span>
+      </div>
+      <div style="padding:18px 20px;">
+        <h1>🌱 성장조건 · 진화 트리</h1>
+        <p>아기부터 성체까지, 각 단계에서 신경 써야 할 케어미스·행복도·친밀도 조건을 한눈에 확인하세요.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-section">
+    <div class="evo-tree" id="evoTree"></div>
+  </section>
+
+  <section class="page-section">
+    <div class="window">
+      <div class="titlebar titlebar--butter">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">TIP.TXT</span>
+      </div>
+      <div style="padding:16px 20px; font-size:13px; line-height:1.7;">
+        <strong>💡 성장 팁</strong>
+        <ul style="margin-top:8px; padding-left:18px;">
+          <li>케어미스(お世話ミス)는 배고픔/화장실/기분 신호를 제때 처리하지 못했을 때 쌓여요.</li>
+          <li>같은 조건이라도 성격 계열에 따라 결과가 달라질 수 있으니, 원하는 캐릭터의 <a href="characters.html">캐릭터 상세 조건</a>을 함께 확인하세요.</li>
+          <li>성체가 되면 <a href="marriage.html">결혼</a>을 통해 다음 세대로 이어갈 수 있어요.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong>Tamagotchi Meets 한국어 가이드</strong><p>성장조건 수치는 예시이며, 실제 데이터로 교체 가능합니다.</p></div>
+      <small>© 비공식 팬 사이트</small>
+    </div>
+  </footer>
+  <footer class="taskbar">
+    <button class="taskbar__start" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">✿ START</button>
+    <span class="taskbar__info">GROWTH_TREE.HTML</span>
+    <a class="taskbar__store" href="marriage.html">💍 결혼 가이드</a>
+    <time class="taskbar__clock" id="clock">00:00</time>
+  </footer>
+</body>
+</html>

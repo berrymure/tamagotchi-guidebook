@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>일본어 번역 사전 — Tamagotchi Meets 한국어 가이드</title>
+  <meta name="theme-color" content="#f6bfd8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/guide.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <script defer src="assets/js/translate.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#dictTable">사전 목록으로 바로가기</a>
+  <nav class="gnav" id="gnav" aria-label="주요 메뉴"></nav>
+
+  <div class="page-hero">
+    <div class="window">
+      <div class="titlebar titlebar--mint">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">TRANSLATE.HTML</span>
+      </div>
+      <div style="padding:18px 20px;">
+        <h1>🈂️ 일본어 ↔ 한국어 번역 사전</h1>
+        <p>게임 속에서 자주 나오는 일본어 단어를 검색하고, 버튼 하나로 한국어 뜻을 바로 확인하세요.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-section">
+    <div class="dict-toolbar">
+      <div class="dict-switch" role="group" aria-label="표시 방향 전환">
+        <button type="button" class="is-active" data-dir="ja-ko">일본어 → 한국어</button>
+        <button type="button" data-dir="ko-ja">한국어 → 일본어</button>
+      </div>
+      <div class="tabs" id="dictTabs" role="group" aria-label="카테고리"></div>
+      <div class="searchbox" style="flex:1;min-width:200px;">
+        <span class="searchbox__icon" aria-hidden="true">⌕</span>
+        <input id="dictSearch" type="search" autocomplete="off" placeholder="단어 검색 (예: おでかけ / 외출)">
+        <button class="searchbox__clear" id="dictClear" type="button" hidden>×</button>
+      </div>
+    </div>
+
+    <div class="dict-table-wrap">
+      <table class="dict-table" id="dictTable">
+        <thead><tr id="dictHead"></tr></thead>
+        <tbody id="dictBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="section-label">
+      <div><span class="section-label__eyebrow">SCREEN GUIDE</span><strong>게임 화면 메뉴 번역 예시</strong></div>
+      <span class="section-label__line" aria-hidden="true"></span>
+    </div>
+    <p style="max-width:760px;margin:0 auto 10px;font-size:13px;color:var(--ink-soft);">
+      ⚠️ 저작권 보호를 위해 실제 게임 스크린샷은 싣지 않았어요. 대신 메뉴 버튼 구성을 본떠 만든 예시 화면으로,
+      실제 게임을 켜고 아래 단어들을 하나씩 대조해보면서 확인해보세요.
+    </p>
+    <div class="screen-mock">
+      <div class="screen-mock__side">
+        <h4>📱 일본어 메뉴 (예시)</h4>
+        <div class="screen-mock__btn">ごはん</div>
+        <div class="screen-mock__btn">おやつ</div>
+        <div class="screen-mock__btn">トイレ</div>
+        <div class="screen-mock__btn">おでかけ</div>
+        <div class="screen-mock__btn">けっこん</div>
+      </div>
+      <div class="screen-mock__side">
+        <h4>🇰🇷 한국어 번역</h4>
+        <div class="screen-mock__btn">밥(식사)</div>
+        <div class="screen-mock__btn">간식</div>
+        <div class="screen-mock__btn">화장실</div>
+        <div class="screen-mock__btn">외출</div>
+        <div class="screen-mock__btn">결혼</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong>Tamagotchi Meets 한국어 가이드</strong><p>번역 사전은 계속 추가됩니다.</p></div>
+      <small>© 비공식 팬 사이트</small>
+    </div>
+  </footer>
+  <footer class="taskbar">
+    <button class="taskbar__start" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">✿ START</button>
+    <span class="taskbar__info">TRANSLATE.HTML</span>
+    <a class="taskbar__store" href="faq.html">❓ FAQ</a>
+    <time class="taskbar__clock" id="clock">00:00</time>
+  </footer>
+</body>
+</html>

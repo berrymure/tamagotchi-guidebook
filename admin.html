@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>관리자 페이지 — Tamagotchi Meets 한국어 가이드</title>
+  <meta name="theme-color" content="#f6bfd8">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/guide.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <script defer src="assets/js/admin.js"></script>
+</head>
+<body>
+  <nav class="gnav" id="gnav" aria-label="주요 메뉴"></nav>
+
+  <div class="page-hero">
+    <div class="window">
+      <div class="titlebar titlebar--lavender">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">ADMIN.HTML</span>
+      </div>
+      <div style="padding:18px 20px;">
+        <h1>🛠️ 관리자 페이지</h1>
+        <p>캐릭터·아이템·마을·번역 단어를 추가/수정/삭제할 수 있어요. (이 브라우저에만 저장됩니다)</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-section">
+    <div class="admin-note">
+      ⚠️ 이 페이지에서 저장한 데이터는 <strong>지금 사용 중인 브라우저의 localStorage</strong>에만 저장돼요. 다른 기기·브라우저에는 반영되지 않아요.
+      실제 배포 사이트에 반영하려면 아래 <strong>"JSON으로 내보내기"</strong> 버튼을 눌러 결과를 <code>assets/js/data.js</code> 파일의 데이터에 붙여넣어 주세요.
+    </div>
+
+    <div class="tabs" id="adminTabs" role="group" aria-label="관리 항목" style="margin-bottom:16px;"></div>
+
+    <div class="admin-grid" id="adminPanels"></div>
+
+    <div class="admin-actions">
+      <button class="primary-button" id="exportBtn" type="button">⬇ JSON으로 내보내기</button>
+      <label class="secondary-button" style="cursor:pointer;">
+        ⬆ JSON 불러오기
+        <input type="file" id="importInput" accept="application/json" hidden>
+      </label>
+      <button class="danger-button" id="resetBtn" type="button">↺ 기본 데이터로 초기화</button>
+    </div>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong>Tamagotchi Meets 한국어 가이드</strong><p>관리자 모드 · 로컬 저장 전용</p></div>
+      <small>© 비공식 팬 사이트</small>
+    </div>
+  </footer>
+  <footer class="taskbar">
+    <button class="taskbar__start" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">✿ START</button>
+    <span class="taskbar__info">ADMIN.HTML</span>
+    <a class="taskbar__store" href="index.html">🏠 홈으로</a>
+    <time class="taskbar__clock" id="clock">00:00</time>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>결혼 가이드 — Tamagotchi Meets 한국어 가이드</title>
+  <meta name="theme-color" content="#f6bfd8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/guide.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <script defer src="assets/js/marriage.js"></script>
+</head>
+<body>
+  <nav class="gnav" id="gnav" aria-label="주요 메뉴"></nav>
+
+  <div class="page-hero">
+    <div class="window">
+      <div class="titlebar titlebar--pink">
+        <span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="titlebar__name">MARRIAGE.HTML</span>
+      </div>
+      <div style="padding:18px 20px;">
+        <h1>💍 결혼 가이드 (けっこん)</h1>
+        <p id="marriageIntro"></p>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-section">
+    <div class="section-label">
+      <div><span class="section-label__eyebrow">REQUIREMENTS</span><strong>결혼 조건</strong></div>
+      <span class="section-label__line" aria-hidden="true"></span>
+    </div>
+    <ul id="marriageReqs" style="max-width:760px;margin:0 auto;padding-left:20px;font-size:14px;line-height:1.8;"></ul>
+  </section>
+
+  <section class="page-section">
+    <div class="section-label">
+      <div><span class="section-label__eyebrow">POPULAR CANDIDATES</span><strong>인기 결혼 상대</strong></div>
+      <span class="section-label__line" aria-hidden="true"></span>
+    </div>
+    <div class="chara-grid" id="candidateGrid"></div>
+    <p style="text-align:center;margin-top:16px;font-size:13px;">
+      결혼 후 태어나는 다음 세대 캐릭터가 궁금하다면 <a href="genetics.html">🧬 유전자 조합 계산기</a>를 확인해보세요.
+    </p>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong>Tamagotchi Meets 한국어 가이드</strong><p>결혼 후보/조건은 예시 데이터입니다.</p></div>
+      <small>© 비공식 팬 사이트</small>
+    </div>
+  </footer>
+  <footer class="taskbar">
+    <button class="taskbar__start" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">✿ START</button>
+    <span class="taskbar__info">MARRIAGE.HTML</span>
+    <a class="taskbar__store" href="genetics.html">🧬 유전자 계산기</a>
+    <time class="taskbar__clock" id="clock">00:00</time>
+  </footer>
+</body>
+</html>

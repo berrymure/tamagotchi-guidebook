@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#352b40" stroke-opacity=".07" stroke-width="2"/>
+    </pattern>
+    <linearGradient id="title" x1="0" x2="1">
+      <stop offset="0" stop-color="#eb5f9f"/>
+      <stop offset=".55" stop-color="#9d7ab8"/>
+      <stop offset="1" stop-color="#5ca7dd"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#fff4f8"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="170" cy="130" r="120" fill="#f7bfd8" opacity=".75"/>
+  <circle cx="1040" cy="500" r="170" fill="#c7e7f2" opacity=".7"/>
+  <rect x="145" y="105" width="910" height="420" rx="24" fill="#fff" stroke="#352b40" stroke-width="6"/>
+  <rect x="145" y="105" width="910" height="58" rx="24" fill="#f7bfd8" stroke="#352b40" stroke-width="6"/>
+  <circle cx="190" cy="134" r="11" fill="#ff6d5b" stroke="#352b40" stroke-width="4"/>
+  <circle cx="225" cy="134" r="11" fill="#ffd34d" stroke="#352b40" stroke-width="4"/>
+  <circle cx="260" cy="134" r="11" fill="#6ccb78" stroke="#352b40" stroke-width="4"/>
+  <text x="305" y="145" font-family="monospace" font-size="23" font-weight="700" fill="#352b40">BERRYMURE_SHOP.HTML</text>
+  <text x="600" y="285" text-anchor="middle" font-family="monospace" font-size="54" font-weight="800" fill="#352b40">BERRYMURE</text>
+  <text x="600" y="360" text-anchor="middle" font-family="monospace" font-size="70" font-weight="800" fill="url(#title)">SHOWCASE SHOP</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#655b74">상품을 둘러보고 네이버 스마트스토어에서 구매하세요</text>
+  <rect x="405" y="456" width="390" height="48" rx="24" fill="#fff0ba" stroke="#352b40" stroke-width="4"/>
+  <text x="600" y="488" text-anchor="middle" font-family="monospace" font-size="21" font-weight="700" fill="#352b40">SMARTSTORE CONNECTED</text>
+</svg>

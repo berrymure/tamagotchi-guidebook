@@ -1,0 +1,19 @@
+{
+  "name": "Tamagotchi Meets 한국어 육성가이드",
+  "short_name": "다마치 가이드",
+  "description": "다마고치 미츠를 위한 한국어 육성가이드 & 일본어 번역 사전",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#fff4f8",
+  "theme_color": "#f6bfd8",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
